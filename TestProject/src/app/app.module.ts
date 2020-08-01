@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FirstPageComponent } from './modules/first-page/first-page.component';
+import { PaymentPageComponent } from './modules/payment-page/payment-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FirstPageComponent,
+    PaymentPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

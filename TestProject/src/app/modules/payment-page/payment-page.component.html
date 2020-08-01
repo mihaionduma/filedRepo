@@ -1,0 +1,39 @@
+<form [formGroup]="paymentForm" (submit)='submitForm()'>
+    <div>
+      <label for="creditCardNumber">
+        Credit card number
+      </label>
+      <input id="creditCardNumber" type="text"  formControlName="creditCardNumber">
+    </div>
+  
+    <div>
+      <label for="cardholder">
+        Card holder
+      </label>
+      <input id="cardholder" type="text"  formControlName="cardholder">
+    </div>
+
+    <div>
+        <label for="expirationDate">
+          Expiration date
+        </label>
+        <input id="expirationDate" type="date"  formControlName="expirationDate">
+      </div>
+
+      <div>
+        <label for="securityCode">
+          Security Code
+        </label>
+        <input id="securityCode" type="text" formControlName="securityCode">
+      </div>
+
+      <div>
+        <label for="amount">
+          Amount
+        </label>
+        <input id="amount" type="number"  formControlName="amount">
+      </div> 
+      
+      <button class="button" type="submit" [disabled]="!paymentForm.valid">Purchase</button>
+  </form>
+
