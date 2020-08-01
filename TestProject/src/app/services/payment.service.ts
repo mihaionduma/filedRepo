@@ -10,7 +10,6 @@ export class PaymentService {
   constructor(private http: HttpClient) { }
 
   public pay(paymentDetails: CardDetailsModel): void {
-    console.log(paymentDetails);
     const options = {
       // tslint:disable-next-line:object-literal-key-quotes
       'creditCardNumber': paymentDetails.creditCardNumber,
