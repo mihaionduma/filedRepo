@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FirstPageComponent } from './modules/first-page/first-page.component';
-import { PaymentPageComponent } from './modules/payment-page/payment-page.component';
+import { FirstPageComponent } from './components/first-page/first-page.component';
+import { PaymentPageComponent } from './components/payment-page/payment-page.component';
 
 
 const routes: Routes = [

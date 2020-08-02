@@ -12,8 +12,14 @@ export function ValidateDate(currentDate) {
 
         if (dateSplit[0] >= thisMoment.getFullYear().toString()) {
             // tslint:disable-next-line:radix
-            if (parseInt(dateSplit[1]) < parseInt(thisMoment.getMonth().toString())) {
+            if (parseInt(dateSplit[1]) < thisMoment.getMonth()) {
                 inputMoment.setErrors({incorrect: true});
+            } else {
+                // tslint:disable-next-line:radix
+                if (parseInt(dateSplit[2]) > thisMoment.getDay()) {
+                    console.log('pai de ce?');
+                    inputMoment.setErrors({incorrect: true});
+                }
             }
        } else {
            inputMoment.setErrors({incorrect: true});
